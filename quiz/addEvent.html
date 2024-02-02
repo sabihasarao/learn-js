@@ -4,11 +4,20 @@
   <meta charset="UTF-8">
   <title>Add Event</title>
   <link rel="stylesheet" href="../css/index.css">
-  <script src="scripts/addEvent.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var button = document.getElementById('myBtn');
+      var paragraph = document.getElementById('demo');
+
+      button.addEventListener('click', function () {
+        paragraph.textContent = 'Button clicked!';
+      });
+    });
+  </script>
 </head>
 <body>
 <div id="root">
-  <button id="myBtn"> Click Me! </button>
+  <button id="myBtn">Click Me!</button>
   <p id="demo"></p>
 </div>
 </body>

@@ -22,10 +22,14 @@
       const numbers = numbersString.split(',').map(Number);
 
       // Using map to calculate the square root of each number
-      // Use Math.sqrt(number) to calculate sq root
       const squareRoots = numbers.map(number => {
-        return 0
-    });
+        // Check if the number is negative
+        if (number < 0) {
+          console.error(`Error: Cannot calculate square root of negative number (${number}).`);
+          return NaN; // Return NaN for negative numbers
+        }
+        return Math.sqrt(number);
+      });
 
       // Displaying the original and transformed arrays
       console.log('Original Numbers Array:', numbers);
