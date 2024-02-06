@@ -11,6 +11,8 @@ class PStack {
 
   push(p) {
     // implement in child class
+    // take an element and add it at the end of the array
+
   }
 
   pop() {
@@ -25,6 +27,7 @@ class PStackImpl extends PStack {
     super();
   }
   push(p) {
+    console 
     return this.#persons.push(p)
   }
 
